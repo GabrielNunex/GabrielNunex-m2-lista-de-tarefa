@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --font: "Roboto", sans-serif;
+    --cor-primaira: #3b5bdb;
+    --cor-fundo: #e2e2e2;
+    --cor-fundo-inputs: #ebebeb;
+    --cor-fundo-itens: #f1f3f5;
+    --cor-span-urgente: #e40404;
+    --cor-span-normal: #028302;
+    --cor-span-importante: #f3a703;
+    --cor-geral: white;
+}
+
+body{
+    font-family: var(--font);
+    background-color: var(--cor-fundo);
+}
+
+.header__container{
+    background-color: var(--cor-geral);
+}
+
+.header__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10rem;
+}
+
+.header__title{
+    color: var(--cor-primaira);
+    font-weight: 700;
+}
+
+.input__box{
+    padding: .5rem;
+    background-color: var(--cor-fundo-inputs);
+    border: none;
+    border-radius: .2rem;
+}
+
+.header__input--search{
+    width: 40vw;
+}
+
+.main__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.form__container{
+    background-color: var(--cor-geral);
+    margin: 2rem 10rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: .5rem;
+}
+
+h2{
+    font-weight: 500;
+}
+
+.form__input-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.form__input--text{
+    width: 50vw;
+}
+
+.form__input--priority{
+    width: 30vw;
+}
+
+.form__button--add-task{
+    background-color: var(--cor-primaira);
+    color: var(--cor-geral);
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.tasks__container{
+    background-color: var(--cor-geral);
+    margin: 0 10rem 2rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: .5rem;
+}
+
+.tasks__list{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.task__item{
+    background-color: var(--cor-fundo-itens);
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    border-radius: .2rem;
+}
+
+.task-info__container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.task-type{
+    width: 10px;
+    height: 10px;
+    border-radius: 1rem;
+}
+
+.span-normal{
+    background-color: var(--cor-span-normal);
+}
+
+.span-important{
+    background-color: var(--cor-span-importante);
+}
+
+.span-urgent{
+    background-color: var(--cor-span-urgente);
+}
+
+.task__button--remove-task{
+    background-image:url(./assets/trash-icon.svg);
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+}
