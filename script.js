@@ -19,12 +19,12 @@ function renderElements (array) {
   list.innerHTML = '';
 
   for (let i = 0; i < array.length; i++){
-    let item = createTaskItem (array[i].title, array[i].type);
+    let item = createTaskItem (array[i]);
     list.appendChild(item);
   }
 }
 
-function createTaskItem (title, type) {
+function createTaskItem (object) {
   const li = document.createElement("li");
   li.classList.add("task__item");
 
@@ -33,16 +33,16 @@ function createTaskItem (title, type) {
   
   const span = document.createElement("span");
   span.classList.add("task-type"); 
-  if (type == "Urgente") {
+  if (object.type.toLowerCase() == "urgente") {
     span.classList.add("span-urgent")
-  } else if (type == "Normal"){
+  } else if (object.type.toLowerCase() == "normal"){
     span.classList.add("span-normal")
   } else {
     span.classList.add("span-important")
   };
 
   const p = document.createElement("p");
-  p.innerText = title;
+  p.innerText = object.title;
 
   const button = document.createElement("button");
   button.classList.add("task__button--remove-task");
@@ -53,7 +53,7 @@ function createTaskItem (title, type) {
   li.appendChild(button);
 
   button.addEventListener('click', () => {
-    const newObject = {title: p.innerText , type: type}; 
+    const newObject = {title: p.innerText , type: object.type}; 
     
     console.log(newObject);
     console.log(tasks[0]);
